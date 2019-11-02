@@ -1,0 +1,7 @@
+version: "3.7"
+
+services:
+  saltmaster:
+    build:
+      context: .
+      dockerfile: saltmaster.dockerfile
