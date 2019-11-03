@@ -5,3 +5,9 @@ services:
     build:
       context: .
       dockerfile: saltmaster.dockerfile
+  saltminion:
+    build:
+      context: .
+      dockerfile: saltminion.dockerfile
+    depends_on:
+      - saltmaster
