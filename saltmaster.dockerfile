@@ -12,4 +12,6 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y salt-master && \
     rm -rf /var/lib/apt/lists/*
 
+RUN sed -i "s|#auto_accept: False|auto_accept: True|g" /etc/salt/master
+
 ENTRYPOINT ["salt-master", "-l", "debug"]
